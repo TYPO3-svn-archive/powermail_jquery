@@ -1,0 +1,27 @@
+# POWERMAIL PLUGIN #
+plugin.tx_powermail_pi1 {
+	libraryToUse = {$plugin.powermail.libraryToUse}			
+}
+
+# ---------------------- Additional Typoscript ---------------------
+
+# powermail is on current page and jquery should be used
+[userFunc = user_powermailOnCurrentPage] && [globalVar = LIT:jquery = {$plugin.powermail.libraryToUse}]
+	page.includeJS.file31312 = EXT:powermail_jquery/js/jquery/jquery.min.js
+	page.includeJS.file31313 = EXT:powermail_jquery/js/jquery/tx_powermail.js
+[end]
+[globalVar = LIT:1 = {$plugin.powermail.useExternalJSLibrary}]
+	page.includeJS.file31312 >
+[end]
+
+powermailJS {
+	typeNum = 3131
+	
+	config {		
+		message_preview = function tx_powermail_previewMessageOverwrite(){}
+	}		
+}
+
+[globalVar = LIT:jquery = {$plugin.powermail.libraryToUse}]
+	powermailJS.10.template.file = EXT:powermail_jquery/js/jquery/tx_powermail.js
+[global]

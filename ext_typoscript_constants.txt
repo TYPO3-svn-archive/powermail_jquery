@@ -1,0 +1,13 @@
+###
+# This are the default TS-constants for powermail
+##
+
+plugin.powermail {
+	
+	# cat=plugin.powermail_additionalconfig//0900; type=options[mootools,prototype,jquery]; label= Javascript Library: Set to either "mootools", "prototype" or "jquery" to choose a javascript library for frontend validation	
+	libraryToUse = prototype	
+	
+	# cat=plugin.powermail_additionalconfig/enable/0900; type=boolean; label= Enable this if you wish to include your own Mootools/JQuery/Prototype 
+	useExternalJSLibrary = 0
+	
+}
