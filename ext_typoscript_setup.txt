@@ -8,7 +8,8 @@ plugin.tx_powermail_pi1 {
 # powermail is on current page and jquery should be used
 [userFunc = user_powermailOnCurrentPage] && [globalVar = LIT:jquery = {$plugin.powermail.libraryToUse}]
 	page.includeJS.file31312 = EXT:powermail_jquery/js/jquery/jquery.min.js
-	page.includeJS.file31313 = EXT:powermail_jquery/js/jquery/tx_powermail.js
+	# page.includeJS.file31313 = EXT:powermail_jquery/js/jquery/tx_powermail.js
+	page.includeJS.file31313 >
 [end]
 [globalVar = LIT:1 = {$plugin.powermail.useExternalJSLibrary}]
 	page.includeJS.file31312 >
